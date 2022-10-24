@@ -1,5 +1,7 @@
 import os
 
+#todo: add sth about directory
+
 file_content = """
 Some text file
 of multiple lines
