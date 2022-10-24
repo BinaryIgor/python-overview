@@ -39,19 +39,19 @@ class Triangle(Shape):
 
     def __init__(self, a, b, c):
         super().__init__("Triangle")
-        self.a = a
-        self.b = b
-        self.c = c
+        self._a = a
+        self._b = b
+        self._c = c
 
     @staticmethod
     def equilateral(a):
         return Triangle(a, a, a)
 
     def __str__(self):
-        return f'Triangle({self.a}, {self.b}, {self.c})'
+        return f'Triangle({self._a}, {self._b}, {self._c})'
 
     def perimeter(self):
-        return self.a + self.b + self.c
+        return self._a + self._b + self._c
 
 
 u1 = User(1, "some user")

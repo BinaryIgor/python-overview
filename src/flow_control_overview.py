@@ -22,6 +22,7 @@ else:
     print(f"if is: {if_var}")
 
 print("For loop...")
+# change to range(0, 10, 2) to add step value (1 by default)
 for i in range(0, 10):
     print(i)
 
@@ -38,3 +39,7 @@ while n < 10:
         continue
     print(n)
     n += 1
+
+# ternary operator (one line if)
+t = 3
+print(f"Evaluating ternary operator ({t}): {2 if t > 0 else 0}")
