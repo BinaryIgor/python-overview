@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from enum import Enum
 
 
 class User:
@@ -54,6 +55,12 @@ class Triangle(Shape):
         return self._a + self._b + self._c
 
 
+class Gender(Enum):
+    MALE = 1,
+    FEMALE = 2,
+    OTHER = 3
+
+
 u1 = User(1, "some user")
 u2 = User(1, "some user")
 
@@ -65,12 +72,17 @@ print(f'Users map: {users_map}')
 
 users_set = {u1, u2, User(3, 'different user')}
 print(f'Users set: {users_set}')
+print()
 
 print(f"Immutable user: {ImmutableUser(1, 'ala')}")
 
 if ImmutableUser(1, 'ala') == ImmutableUser(1, 'ala'):
     print("equal immutable users")
+print()
 
 triangle = Triangle(1, 2, 2)
 print(f'Triangle ({triangle}) perimeter: {triangle.perimeter()}')
 print(f'Equilateral triangle: {Triangle.equilateral(2)}')
+print()
+
+print(f"All Gender enums: ({list(Gender)})")
