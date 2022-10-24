@@ -22,3 +22,4 @@ d_num = 2.6
 print(f'floor({d_num}): {math.floor(d_num)}')
 print(f'ceil({d_num}): {math.ceil(d_num)}')
 print(f'round({d_num}): {round(d_num)}')
+print(f'sqrt(4): {math.sqrt(4)}')
