@@ -4,7 +4,7 @@ import traceback
 
 class CustomException(Exception):
     def __init__(self, msg):
-        super.__init__(msg)
+        super().__init__(msg)
 
 
 try:
@@ -13,7 +13,7 @@ except:
     print("Handling exception...", file=sys.stderr)
     traceback.print_exc()
 
-print()
+print(file=sys.stderr)
 
 try:
     {}["a"]

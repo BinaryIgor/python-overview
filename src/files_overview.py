@@ -1,15 +1,18 @@
 import os
 import shutil
+import sys
 from os import path
 
 file_content = """
 Some text file
 of multiple lines
-"""
+""".strip()
 
 text_file_path = "/tmp/tmp_file.txt"
-binary_file_path = "../files/forest.jpg"
-dir_path = "/tmp/dir"
+
+binary_file_path = sys.argv[1] if len(sys.argv) > 1 else "../files/forest.jpg"
+
+dir_path = "/tmp/dir_python"
 
 with open(text_file_path, "w") as f:
     f.write(file_content)
@@ -26,7 +29,7 @@ with open(binary_file_path, "rb") as f:
     print(len(content))
 
 print()
-print(f"Does {dir_path} exists?: {path.exists(dir_path)}")
+print(f"Does {dir_path} exist?: {path.exists(dir_path)}")
 
 if not path.exists(dir_path):
     os.mkdir(dir_path)

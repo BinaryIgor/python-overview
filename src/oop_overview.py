@@ -48,11 +48,11 @@ class Triangle(Shape):
     def equilateral(a):
         return Triangle(a, a, a)
 
-    def __str__(self):
-        return f'Triangle({self._a}, {self._b}, {self._c})'
-
     def perimeter(self):
         return self._a + self._b + self._c
+
+    def __str__(self):
+        return f'Triangle({self._a}, {self._b}, {self._c})'
 
 
 class Gender(Enum):
@@ -62,7 +62,8 @@ class Gender(Enum):
 
 
 u1 = User(1, "some user")
-u2 = User(1, "some user")
+u2 = User(1, "some user2")
+u2.name = "some user"
 
 if u1 == u2:
     print('u1 is equal to u2')
@@ -77,7 +78,7 @@ print()
 print(f"Immutable user: {ImmutableUser(1, 'ala')}")
 
 if ImmutableUser(1, 'ala') == ImmutableUser(1, 'ala'):
-    print("equal immutable users")
+    print("Equal immutable users")
 print()
 
 triangle = Triangle(1, 2, 2)

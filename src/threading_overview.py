@@ -4,7 +4,6 @@ import concurrent.futures
 
 
 # because of the GIL, Python programs always run on a single core!
-
 def some_function():
     print(f"About to sleep in a thread...{threading.current_thread().name}")
     time.sleep(1)
@@ -18,6 +17,7 @@ thread.start()
 thread.join()
 
 print("Thread finished, let's start the executor..")
+print()
 
 executor = concurrent.futures.ThreadPoolExecutor(max_workers=5)
 

@@ -1,5 +1,4 @@
 import random
-import sys
 
 # either __main__ or name of the script (when imported)
 if __name__ == "__main__":
@@ -7,7 +6,7 @@ if __name__ == "__main__":
     second_var = 'ala'
 
     print(f'first_var: {first_var}')
-    sys.stdout.write(f"second_var: {second_var}\n")
+    print(f"second_var: {second_var}")
 
     if_var = 3
 
@@ -21,7 +20,7 @@ if __name__ == "__main__":
         else:
             print("if var is 0")
     else:
-        print(f"if is: {if_var}")
+        print(f"if var is: {if_var}")
 
     print("For loop...")
     # change to range(0, 10, 2) to add step value (1 by default)
